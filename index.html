@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tempo Cirúrgico</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="letra">
+      Calculadora de Tempo Cirúrgico
+    </h1>
+    <br />
+
+    <h2 class="letra"> Insira o tempo de cirurgia </h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Entrada do Paciente</th>
+          <th>Saída do Paciente</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="time" step="3600" id="entradaPaciente" />
+          </td>
+          <td>
+            <input type="time" step="3600" id="saidaPaciente" />
+          </td>
+          <td>
+            <div id="resultadoSala"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Início da Anestesia</th>
+          <th>Final da Anestesia</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="time" step="3600" id="inicioAnestesia" />
+          </td>
+          <td>
+            <input type="time" step="3600" id="fimAnestesia" />
+          </td>
+          <td>
+            <div id="resultadoAnestesia"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Início da Cirurgia</th>
+          <th>Final da Cirurgia</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="time" step="3600" id="inicioCirurgia" />
+          </td>
+          <td>
+            <input type="time" step="3600" id="fimCirurgia" />
+          </td>
+          <td>
+            <div id="resultadoCirurgia"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="calcularTempo()">Calcular</button>
+    
+  </div>
+</body>
+
+</html>
