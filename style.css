@@ -1,0 +1,63 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: grey;
+}
+
+.intro {
+  background-color: #00a600;
+}
+
+.letra {
+  color: #00ab00;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000000;
+}
+.letra1{
+  color: #ffff00;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000000;
+  }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+button{
+  color: #ffff;
+  text-shadow: 2px 2px 5px #000000;
+  border-radius: 5px;
+  background-color: #00ab00;
+  margin-top: 2%;
+
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  color: #00ab00;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000000;
+  background-color: black;
+  
+}
+
+th {
+  background-color: black;
+}
+
+/* Adicione este media query para tornar a disposição em coluna responsiva */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
