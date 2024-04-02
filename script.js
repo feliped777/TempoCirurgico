@@ -2,6 +2,24 @@
 // Autor: Felipe Dias Gomes
 //Contato: felipedias777@gmail.com
 
+ function openModal (){
+    //modal.showModal();
+    
+    
+    calcularTempo();
+    
+    var modal = document.getElementById('myModal');
+  modal.showModal();
+    }
+
+    function fechar() {
+        var modal = document.getElementById('myModal');
+        modal.close();
+      }
+
+
+ 
+
 function calcularTempo() {
   // Obter os valores dos campos de entrada
   const inicioCirurgia = document.getElementById("inicioCirurgia").value;
@@ -37,16 +55,16 @@ function calcularTempo() {
   // Exibir os resultados
   const resultadoCirurgia = document.getElementById("resultadoCirurgia");
   resultadoCirurgia.innerHTML = `
-      <p> ${tempoCirurgiaHoras} horas e ${tempoCirurgiaMinutos} minutos.</p>
+      <p> Tempo de Cirurgia: ${tempoCirurgiaHoras} horas e ${tempoCirurgiaMinutos} minutos.</p>
   `;
 
   const resultadoAnestesia = document.getElementById("resultadoAnestesia");
   resultadoAnestesia.innerHTML = `
-      <p>${tempoAnestesiaHoras} horas e ${tempoAnestesiaMinutos} minutos.</p>
+      <p> Tempo de Anestesia: ${tempoAnestesiaHoras} horas e ${tempoAnestesiaMinutos} minutos.</p>
   `;
 
   const resultadoSala = document.getElementById("resultadoSala");
   resultadoSala.innerHTML = `
-      <p> ${tempoSalaHoras} horas e ${tempoSalaMinutos} minutos.</p>
+      <p> Tempo de Uso de Sala: ${tempoSalaHoras} horas e ${tempoSalaMinutos} minutos.</p>
   `;
 }
