@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <head>
   <meta charset="utf-8">
@@ -24,19 +24,15 @@
         <tr>
           <th>Entrada do Paciente</th>
           <th>Saída do Paciente</th>
-          <th>Resultado</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <input type="time" step="3600" id="entradaPaciente" />
+            <label for="entradaPaciente"></label><input type="time" step="3600" id="entradaPaciente" />
           </td>
           <td>
-            <input type="time" step="3600" id="saidaPaciente" />
-          </td>
-          <td>
-            <div id="resultadoSala"></div>
+            <label for="saidaPaciente"></label><input type="time" step="3600" id="saidaPaciente" />
           </td>
         </tr>
       </tbody>
@@ -46,20 +42,17 @@
         <tr>
           <th>Início da Anestesia</th>
           <th>Final da Anestesia</th>
-          <th>Resultado</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <input type="time" step="3600" id="inicioAnestesia" />
+            <label for="inicioAnestesia"></label><input type="time" step="3600" id="inicioAnestesia" />
           </td>
           <td>
-            <input type="time" step="3600" id="fimAnestesia" />
+            <label for="fimAnestesia"></label><input type="time" step="3600" id="fimAnestesia" />
           </td>
-          <td>
-            <div id="resultadoAnestesia"></div>
-          </td>
+          
         </tr>
       </tbody>
     </table>
@@ -68,26 +61,37 @@
         <tr>
           <th>Início da Cirurgia</th>
           <th>Final da Cirurgia</th>
-          <th>Resultado</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <input type="time" step="3600" id="inicioCirurgia" />
+            <label for="inicioCirurgia"></label><input type="time" step="3600" id="inicioCirurgia" />
           </td>
           <td>
-            <input type="time" step="3600" id="fimCirurgia" />
+            <label for="fimCirurgia"></label><input type="time" step="3600" id="fimCirurgia" />
           </td>
-          <td>
-            <div id="resultadoCirurgia"></div>
-          </td>
+          
         </tr>
       </tbody>
     </table>
-    <button onclick="calcularTempo()">Calcular</button>
+    <button onclick="openModal()">Calcular</button>
     
   </div>
+
+  <dialog id="myModal" class="modal">
+    <div class="div-modal">
+      <div id="resultadoSala"></div>
+      <div id="resultadoAnestesia"></div>
+      <div id="resultadoCirurgia"></div>
+
+
+  
+      <button onclick="fechar()"> Fechar</button>
+    </div>
+   
+
+  </dialog>
 </body>
 
 </html>
